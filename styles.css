@@ -41,7 +41,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 350px;  /* Increased from 250px to 350px */
+    height: 250px;  /* Reduced from 350px to 250px to make it thinner */
     overflow: hidden;
 }
 
@@ -67,7 +67,7 @@ header {
     z-index: 2;
     color: white;
     text-align: center;
-    padding: 80px 20px;  /* Increased top/bottom padding from 50px to 80px */
+    padding: 50px 20px;  /* Reduced from 80px to 50px to match the smaller header */
 }
 
 .header-content h1 {
