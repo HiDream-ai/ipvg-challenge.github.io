@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity-Preserving Video Generation Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="overlay"></div>
+            <div class="header-content">
+                <h1>IDENTITY-PRESERVING VIDEO GENERATION CHALLENGE</h1>
+                <h3>@ ACM MULTIMEDIA 2025</h3>
+                <div class="conference-logo">
+                    <!-- <img src="acm-logo.png" alt="ACM MM 2025" class="logo-image"> -->
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav id="main-nav" class="sticky">
+        <div class="nav-container">
+            <ul>
+                <li><a href="#overview">Challenge Overview</a></li>
+                <li><a href="#task">Task Description</a></li>
+                <li><a href="#datasets">Datasets</a></li>
+                <li><a href="#submission">Submission Format</a></li>
+                <li><a href="#evaluation">Evaluation</a></li>
+                <li><a href="#participation">Participation</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#paper">Paper Submission</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>ACM MM 2025 Grand Challenge</h2>
+                    <p class="tagline">Advancing the frontiers of identity-preserving generative video models</p>
+                    <div class="hero-buttons">
+                        <a href="#datasets" class="btn primary-btn">Access Dataset</a>
+                        <a href="#submission" class="btn secondary-btn">Submit Results</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <div class="container">
+            <section id="overview" class="content-section"> 
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> Challenge Overview</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="content-box">
+                    <p>In this grand challenge, we introduce <strong>Identity-Preserving Video Generation (IPVG)</strong> task, which maintains the consistency of given reference identity along text-to-video generation process. This year's IPVG grand challenge includes two tracks:</p>
+                    <div class="challenge-tracks">
+                        <div class="track">
+                            <div class="track-icon"><i class="fas fa-user"></i></div>
+                            <div class="track-title">Facial Identity-Preserving Video Generation</div>
+                        </div>
+                        <div class="track">
+                            <div class="track-icon"><i class="fas fa-user-tie"></i></div>
+                            <div class="track-title">Full-body Identity-Preserving Video Generation</div>
+                        </div>
+                    </div>
+                    <p>To further motivate and challenge the academic and industrial research communities, we have released a new dataset: <strong>Identity-Preserving Video Benchmark (VIP-200K)</strong>, consisting of approximately 500,000 video-prompt pairs with 200,000 unique identities.</p>
+                </div>
+            </section>
+            
+            <section id="task" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-tasks"></i> Task Description</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="content-box">
+                    <p>This year we will focus on two tasks:</p>
+                    <div class="task-cards">
+                        <div class="task-card">
+                            <div class="task-number">01</div>
+                            <h3>Facial identity-preserving text-to-video generation</h3>
+                            <p>Given videos and corresponding prompts plus reference identity facial images, the goal is to synthesize temporally consistent videos that align with prompts while maintaining identity preservation.</p>
+                        </div>
+                        <div class="task-card">
+                            <div class="task-number">02</div>
+                            <h3>Full-body identity-preserving text-to-video generation</h3>
+                            <p>This track extends the first by enforcing identity-preserving constraints on hairstyle, face, clothing, and other attributes across generated frames.</p>
+                        </div>
+                    </div>
+                    <p>Contestants must develop an identity-preserving video generation system based on the VIP-200K dataset. For evaluation, systems must generate at least one video per <identity images, prompt> pair in the test set.</p>
+                </div>
+            </section>
+            
+            <section id="datasets" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-database"></i> Datasets</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="content-box">
+                    <p>To formalize the task of identity-preserving text-to-video generation, we provide the following datasets:</p>
+                    <div class="dataset-info">
+                        <div class="dataset-item">
+                            <h4><i class="fas fa-film"></i> Training Dataset</h4>
+                            <p>500,000 videos in VIP-200K, each coupled with a textual prompt and one or more identity images.</p>
+                        </div>
+                        <div class="dataset-item">
+                            <h4><i class="fas fa-vial"></i> Testing Dataset</h4>
+                            <p>200 unseen person IDs. Each ID has portrait images and five textual prompts for video generation, totaling 1,000 test pairs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="dataset-table">
+                            <thead>
+                                <tr>
+                                    <th>Dataset</th>
+                                    <th>Context</th>
+                                    <th>Source</th>
+                                    <th>#Video</th>
+                                    <th>#IDs</th>
+                                    <th>#Hours</th>
+                                    <th>#Prompt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>VIP-200K</td>
+                                    <td>Video-Prompt-identity triplets</td>
+                                    <td>Automatic crawling from web</td>
+                                    <td>500,000</td>
+                                    <td>200,000</td>
+                                    <td>1,700</td>
+                                    <td>500,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="submission" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-upload"></i> Submission Format</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="content-box">
+                    <p>Each team can submit up to three runs, with one primary run evaluated for performance comparison. Submissions must follow this structure:</p>
+                    <div class="code-block">
+                        <pre>submission/
+├── id001/
+│        ├── prompt1.mp4
+│        ├── prompt2.mp4
+│        ├── prompt3.mp4
+│        ├── prompt4.mp4
+│        └── prompt5.mp4
+...
+├── id200/
+│        ├── prompt1.mp4
+│        ├── prompt2.mp4
+│        ├── prompt3.mp4
+│        ├── prompt4.mp4
+│        └── prompt5.mp4</pre>
+                    </div>
+                    <div class="note-box">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Videos must be encoded in H.264 and saved in MP4 format. Non-compliant submissions may be disqualified.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="evaluation" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-bar"></i> Evaluation Metric</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="content-box">
+                    <p>Videos will be assessed based on:</p>
+                    <div class="evaluation-metrics">
+                        <div class="metric">
+                            <div class="metric-number">01</div>
+                            <div class="metric-content">
+                                <h4>Identity Preservation</h4>
+                                <p>Feature similarity with the reference identity image and manual annotation scores.</p>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-number">02</div>
+                            <div class="metric-content">
+                                <h4>Video Quality</h4>
+                                <p>Evaluated via visual quality, motion dynamics, and text alignment using both objective metrics and human assessment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Final scores combine objective and subjective evaluation results.</p>
+                </div>
+            </section>
+            
+            <section id="participation" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> Participation</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="content-box">
+                    <p>The challenge is team-based. Participants can enter one or both tracks. Teams can have multiple members, but individuals cannot be in multiple teams.</p>
+                    <div class="awards-box">
+                        <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                        <p>Top three teams per track will receive awards. Accepted submissions qualify for the conference's grand challenge award.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="timeline" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar"></i> Timeline</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="content-box">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">March 8, 2025</div>
+                            <div class="timeline-content">
+                                <h4>Website & Call for Participation</h4>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">March 15, 2025</div>
+                            <div class="timeline-content">
+                                <h4>Dataset release</h4>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">June 5, 2025</div>
+                            <div class="timeline-content">
+                                <h4>Testing set release</h4>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">June 20, 2025</div>
+                            <div class="timeline-content">
+                                <h4>Results submission</h4>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">June 26, 2025</div>
+                            <div class="timeline-content">
+                                <h4>Evaluation results announcement</h4>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">June 30, 2025</div>
+                            <div class="timeline-content">
+                                <h4>Paper submission deadline</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="paper" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-file-alt"></i> Paper Submission</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="content-box">
+                    <p>Please follow the ACM Multimedia 2025 Grand Challenge guidelines for paper submission.</p>
+                    <div class="submission-button">
+                        <a href="https://acmmm2025.org" class="btn primary-btn" target="_blank">ACM MM 2025 Guidelines <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> panyw.ustc@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ACM Multimedia 2025</p>
+                </div>
+                <div class="footer-section links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="https://acmmm2025.org" target="_blank">ACM MM 2025</a></li>
+                        <li><a href="#overview">Challenge Overview</a></li>
+                        <li><a href="#datasets">Datasets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://x.com/vivago_ai" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/HiDream-ai" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Identity-Preserving Video Generation Challenge | ACM Multimedia</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Sticky navigation
+        window.onscroll = function() {stickyNav()};
+        var navbar = document.getElementById("main-nav");
+        var sticky = navbar.offsetTop;
+        
+        function stickyNav() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("is-sticky")
+            } else {
+                navbar.classList.remove("is-sticky");
+            }
+        }
+    </script>
+</body>
+</html>
