@@ -152,26 +152,101 @@
                     <div class="section-underline"></div>
                 </div>
                 <div class="content-box">
-                    <p>Each team can submit up to three runs, with one primary run evaluated for performance comparison. Submissions must follow this structure:</p>
-                    <div class="code-block">
-                        <pre>submission/
-├── id001/
-│        ├── prompt1.mp4
-│        ├── prompt2.mp4
-│        ├── prompt3.mp4
-│        ├── prompt4.mp4
-│        └── prompt5.mp4
-...
-├── id200/
-│        ├── prompt1.mp4
-│        ├── prompt2.mp4
-│        ├── prompt3.mp4
-│        ├── prompt4.mp4
-│        └── prompt5.mp4</pre>
+                    <p>We provide two separate test datasets for the VIP200K challenge tracks. Download the appropriate dataset, prepare your results following our structure, and submit via Google Drive.</p>
+                    
+                    <div class="task-cards">
+                        <div class="task-card">
+                            <div class="task-number"><i class="fas fa-user"></i></div>
+                            <h3>Facial Identity-Preserving Track</h3>
+                            <p>Download the facial track test dataset containing 200 identities with reference images and prompts.</p>
+                            <a href="https://github.com/HiDream-ai/ipvg-challenge.github.io/releases/download/testset/vip200k_test_track_Facial.zip" class="btn primary-btn" target="_blank">
+                                <i class="fas fa-download"></i> Download Test Set
+                            </a>
+                        </div>
+                        <div class="task-card">
+                            <div class="task-number"><i class="fas fa-user-tie"></i></div>
+                            <h3>Full-body Identity-Preserving Track</h3>
+                            <p>Download the full-body track test dataset containing 200 identities with reference images and prompts.</p>
+                            <a href="https://github.com/HiDream-ai/ipvg-challenge.github.io/releases/download/testset/vip200k_test_track_Fullbody.zip" class="btn primary-btn" target="_blank">
+                                <i class="fas fa-download"></i> Download Test Set
+                            </a>
+                        </div>
                     </div>
+                    
+                    <div class="dataset-info">
+                        <div class="dataset-item">
+                            <h4><i class="fas fa-folder-open"></i> Test Dataset Content</h4>
+                            <p>Each dataset contains <strong>200 identities (IDs)</strong> organized in folders. Per ID folder: 1 reference image file (<code>image.png</code> or <code>image.webp</code>) and 5 text prompt files (<code>prompt1.txt</code> to <code>prompt5.txt</code>).</p>
+                        </div>
+                        <div class="dataset-item">
+                            <h4><i class="fas fa-sitemap"></i> Directory Structure</h4>
+                            <div class="code-block">
+                                <pre>testset/
+├── id001/
+│   ├── image.png          # Reference image
+│   ├── prompt1.txt        # Text prompt
+│   ├── ...
+│   └── prompt5.txt
+├── ...
+└── id200/</pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="submission-flow">
+                        <div class="submission-step">
+                            <div class="step-header">
+                                <div class="step-number">01</div>
+                                <h4>Prepare Results</h4>
+                            </div>
+                            <div class="step-content">
+                                <p>Generate videos following our structure.</p>
+                                <div class="code-block">
+                                    <pre>submission/
+├── id001/
+│   ├── prompt1.mp4
+│   ├── prompt2.mp4
+│   ├── prompt3.mp4
+│   ├── prompt4.mp4
+│   └── prompt5.mp4
+├── ...
+└── id200/</pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submission-step">
+                            <div class="step-header">
+                                <div class="step-number">02</div>
+                                <h4>Package & Submit</h4>
+                            </div>
+                            <div class="step-content">
+                                <p>Compress your results and submit via Google Drive with proper sharing permissions.</p>
+                                <div class="submission-steps-list">
+                                    <div class="step-item">
+                                        <span class="step-label">Step 1:</span>
+                                        <span>Compress results into <code>facial_results.zip</code> or <code>fullbody_results.zip</code></span>
+                                    </div>
+                                    <div class="step-item">
+                                        <span class="step-label">Step 2:</span>
+                                        <span>Upload to Google Drive with sharing: <em>"Anyone with the link can view"</em></span>
+                                    </div>
+                                    <div class="step-item">
+                                        <span class="step-label">Step 3:</span>
+                                        <span>Send shareable URL(s) to <a href="mailto:panyw.ustc@gmail.com">panyw.ustc@gmail.com</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="note-box">
                         <i class="fas fa-exclamation-circle"></i>
                         <p>Videos must be encoded in H.264 and saved in MP4 format. Non-compliant submissions may be disqualified.</p>
+                    </div>
+                    
+                    <div class="awards-box">
+                        <div class="award-icon"><i class="fas fa-info-circle"></i></div>
+                        <p><strong>Important:</strong> Only the most recent submission per track will be evaluated. Results will be downloaded after the submission deadline. Strictly follow the specified folder structure and naming conventions.</p>
                     </div>
                 </div>
             </section>
