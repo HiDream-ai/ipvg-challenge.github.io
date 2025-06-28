@@ -25,6 +25,7 @@
     <nav id="main-nav" class="sticky">
         <div class="nav-container">
             <ul>
+                <li><a href="#results">Leaderboard</a></li>
                 <li><a href="#overview">Challenge Overview</a></li>
                 <li><a href="#task">Task</a></li>
                 <li><a href="#datasets">Datasets</a></li>
@@ -56,6 +57,83 @@
     
     <main>
         <div class="container">
+            <section id="results" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-trophy"></i> Leaderboard</h2>
+                    <div class="section-underline"></div>
+                </div>
+                <div class="content-box">
+                    <h3>Phase 1</h3>
+                    <p>The first phase involved scoring all participating teams based on their rankings across various objective metrics. The top three teams with the highest aggregate scores advanced to the second phase.</p>
+                    <div class="table-container">
+                        <table class="dataset-table">
+                            <thead>
+                                <tr>
+                                    <th>Team Name</th>
+                                    <th>Face-Cur (↑)</th>
+                                    <th>Face-Arc (↑)</th>
+                                    <th>FID (↓)</th>
+                                    <th>ClipScore (↑)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ghl (PKUVideo)</td>
+                                    <td>0.492</td>
+                                    <td>0.473</td>
+                                    <td>170</td>
+                                    <td>27.8</td>
+                                </tr>
+                                <tr>
+                                    <td>XuanYuan</td>
+                                    <td>0.467</td>
+                                    <td>0.441</td>
+                                    <td>214</td>
+                                    <td>28.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Wislab</td>
+                                    <td>0.285</td>
+                                    <td>0.269</td>
+                                    <td>208</td>
+                                    <td>28.6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 style="margin-top: 2em;">Phase 2</h3>
+                    <p>For the second phase, the results from the top three teams underwent a user study. We constructed 3,000 1v1 comparison pairs by evaluating all pairwise combinations of team results for each test sample. In each head-to-head comparison, a win received 1 point, a draw 0.5 points, and a loss 0 points.</p>
+                    <div class="table-container">
+                        <table class="dataset-table">
+                            <thead>
+                                <tr>
+                                    <th>Team Name</th>
+                                    <th>Score</th>
+                                    <th>Rank</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ghl (PKUVideo)</td>
+                                    <td>1258</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>XuanYuan</td>
+                                    <td>1147.5</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Wislab</td>
+                                    <td>594.5</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
             <section id="overview" class="content-section"> 
                 <div class="section-header">
                     <h2><i class="fas fa-info-circle"></i> Challenge Overview</h2>
